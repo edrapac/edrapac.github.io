@@ -9,6 +9,7 @@ I thought the best use of this cool github pages feature would be a TIL, as seen
 my_dog := Animal(Dog{})
 ```
 Which means you you can call `my_dog.Species()` 
+Additionally, I've noticed speed gains on even some of the most trivial code in comparison to its Python counter parts. While this is to be expected, it's still a very pleasant surprise. I hope soon to be working on a project that can utilize Go routes, as parallelism is currently one of my obsessions
 
 * 7-16-2020: The idea of Concurrency vs Parallelism can be summed up with: 
 > Concurrency is about dealing with lots of things at once. Parallelism is about doing lots of things at once. 
