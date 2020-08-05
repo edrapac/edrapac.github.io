@@ -4,6 +4,8 @@ I thought the best use of this cool github pages feature would be a TIL, as seen
 
 ## TIL (Today I Learned)
 
+* 8-5-2020: The HTTP Strict Transport Security policy (set by the Strict-Transport-Security HTTP header) defines a timeframe where a browser must connect to the web server via HTTPS before the connection is terminated
+
 * 7-19-2020: TIL basics of the Go programming language. Go is a statically typed language with strong emphasis on readibility. It feels, and operates like a hardcore C language but looks much closer to Python 🐍. It supports both running .go files in a Go runtime env or compilation of Go files into the executable for your native arch. It relies heavily on implication, using implicit variable declarations to circumvent the cumbersome var type declarations of languages like C or Java. Implementations of interfaces is also implicit. If for example you have an Animal Interface with a `Species` method that returns the Animal's species, and you have a Dog Class, the Dog type can implement the Animal interface by simply instantiating an instance of the Animal Interface passing a Dog instance to it such as 
 ```
 my_dog := Animal(Dog{})
