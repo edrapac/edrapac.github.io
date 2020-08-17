@@ -4,7 +4,7 @@ I thought the best use of this cool github pages feature would be a TIL, as seen
 
 ## TIL (Today I Learned)
 
-* 8-17-2020: Though the terms bytecode and assembly are sometimes (incorrectly) used interchangeably, bytecode refers to the product of the compilation of code that will then be consumed by a virtual machine or virtual environment, bytecode is intended to be consumed by another piece of software. Assembly language is infact neither compiled nor interpreted but rather _assembled_ as the name suggests, since machines can read the code as is, it just simply has human readable syntax such as `MOV`.
+* 8-17-2020: Though the terms bytecode and assembly are sometimes (incorrectly) used interchangeably, bytecode refers to the product of the compilation of code that will then be consumed by a virtual machine or virtual environment, bytecode is intended to be consumed by another piece of software. Often, when something is compiled to bytecode it is then fed to it's VM in the example of languages like Java and Lua. Assembly language is infact neither compiled nor interpreted but rather _assembled_ as the name suggests, since machines can read the code as is, it just simply has human readable syntax such as `MOV`.
 
 * 8-5-2020: The HTTP Strict Transport Security policy (set by the Strict-Transport-Security HTTP header) defines a timeframe where a browser must connect to the web server via HTTPS before the connection is terminated
 
