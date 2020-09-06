@@ -8,12 +8,11 @@ I thought the best use of this cool github pages feature would be a TIL, as seen
 TIL the weird ways in which we measure wifi strength. There are essentially 2 main methods:
 	* RSSI (Recieved Signal Strength Indicator) - A non-standardized value that is essentially measured based on the observed gain of the wireless signal. This value is calcualted by the receiver and is different accross vendors (non standardized). Some wireless manufacturers use a scale from 0-255 whereas others use 0-60
 	
-	* dBm - Decibels in relation to milliwats. Though this has the word relation in it, this scale is absolute. While the actual unit of measurement, the decibel itself is a relative measurement, it is used to express a ratio. In regards to RSSI we say that dBm is the absolute measurement because it is has been standardized, which is that 0 dBm = 1 mW
+	* dBm - Decibels in relation to milliwats. Decibels are just a generic "thing" that can be used to represent a relation to something more absolute (in this case milliwatts). It's just a ratio to make thing's easier because measuring wifi in mW (a unit of power) would require very, very small numbers (like 0.0001 for -40 dBm which is a fantastic wifi signal). The decibel itself is a relative measurement, as previously stated it is used to express a ratio. In regards to RSSI we say that dBm is the absolute measurement because it is has been standardized, which is that 0 dBm = 1 mW
 	dBm are thus always expressed on a negative scale as it is impossible to have a signal strength of 0 dBm or 1 mW. It is a logarithmic scale, where 3 and 10 have a particular significance. +- 3 dB doubles or halves the strength and +- 10 dB changes the dBm by a factor of 10
 		1. -3 dBm = 0.5 mW
 		2. -10 dBm = 0.1 mW
 		3. -20 dBm  = 0.01 mW
-
 
 
 * 8-17-2020: Though the terms bytecode and assembly are sometimes (incorrectly) used interchangeably, bytecode refers to the product of the compilation of code that will then be consumed by a virtual machine or virtual environment, bytecode is intended to be consumed by another piece of software. Often, when something is compiled to bytecode it is then fed to it's VM in the example of languages like Java and Lua. Assembly language is infact neither compiled nor interpreted but rather _assembled_ as the name suggests, since machines can read the code as is, it just simply has human readable syntax such as `MOV`.
