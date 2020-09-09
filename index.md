@@ -4,6 +4,8 @@ I thought the best use of this cool github pages feature would be a TIL, as seen
 
 ## TIL (Today I Learned)
 
+* 9-8-2020: Short and sweet today. TIL of a really useful linting and autocorrect tool for python files,the tool autopep8 will automatically edit a python file to conform to PEP8 standards. This normally is a best practice sort of thing, but indentation (which is totally capable of breaking your code) also falls under this realm. Use the following command `autopep8 -i your_file` to fix any indentation errors you might have. 
+
 * 9-5-2020: Hard to believe it's already September and I still haven't had a haircut since March lol...
 TIL the weird ways in which we measure wifi strength. There are essentially 2 main methods:
 	* RSSI (Recieved Signal Strength Indicator) - A non-standardized value that is essentially measured based on the observed gain of the wireless signal. This value is calcualted by the receiver and is different accross vendors (non standardized). Some wireless manufacturers use a scale from 0-255 whereas others use 0-60
