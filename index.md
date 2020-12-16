@@ -1,8 +1,13 @@
 # Hello Friend
 
-I thought the best use of this cool github pages feature would be a TIL, as seen across various blogs
+I thought the best use of this cool github pages feature would be a TIL/Technical blog, welcome!
 
 ## TIL (Today I Learned)
+
+* 12-15-2020: TIL that if crafting a CSRF Proof Of Concept attack, the use of other methods besides POST and GET require the attack to invoke an Ajax API (typically XHR) due to the fact that <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fs-method">HTTP Forms are limited to only the POST and GET Methods</a>   
+
+* 12-02-2020: Over a month since I've last posted, yikes. Today's post is much less of a TIL and more of a "Today I Found" post. Today I Found (rediscovered rather) the great folks over at Pentesterlab (https://pentesterlab.com/) a website chock full of free and paid resources for learning more about pentesting. I really enjoyed some of their free challenges, especially some of their entry level scenarios which do a great job highlighting some common vulnerabilities and steps to exploitation, they even have the lab ISOs right there free of charge. In fact, I enjoyed their `SQLi to Shell` entry challenge enough that it prompted me to write a short walkthrough, you can find that <a href="articles/Pentester_Lab_SQLi_to_Shell.md">here</a>
+
 
 * 10-23-2020: Been quite busy with Work and a relocation but rest assured I am back! TIL how to add a new Hard Disk to an ESXi host, all through the convenient vSphere Center interface. First and foremost, you need to install the drive in an unoccupied drive bay on your server. Boot that bad boy up, and head over to your Storage menu. First look in the Devices tab, this will list all of the currently available storage devices. Make notes of their names. Now go to your Datastores menu, click on all your created Datastores and observe that in the VMFS details tab, they show what device the datastore belongs to. All you need to do by process of elimination is find which device doesnt have any datastores associated with it. Thats the one you want to initalize, which can be done from that Devices menu as well.
 
