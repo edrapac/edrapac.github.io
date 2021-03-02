@@ -4,6 +4,37 @@ I thought the best use of this cool github pages feature would be a TIL/Technica
 
 ## TIL (Today I Learned)
 
+* 3-02-2021: TIL of 2 very useful linux CLI tricks involving `awk` and `find` respectively. The first trick is that `awk` can be used to fuzzy match on columns of text. Let's say that we have a 3 column file, `myfile.txt` like the one below:
+```
+testing		foobar		thisisatest
+```
+
+I want to fuzzy match on column 2, and look for anything that has "foo" in it. Well with `awk`, that is as simple as sending `myfile.txt` to awk using the following command
+
+```
+awk '$2 ~ /foo/' myfile.txt
+``` 
+It's not the most intuative notation to read, but it is incredibly effective. 
+
+The second trick involves `find` a tool which, the more I use it the more I realize its powers extend far beyond simple directory searches. Using `find` it is possible to not only execute complex and useful search queries but to also execute commands on the found files/directories. `find` has a very powerful feature called `execdir` which allows you to execute a command or script from the context of the directory in which your `find` query found a match. 
+
+For example lets say we have a simple directory structure as below:
+
+```
+a
+├── b
+│	└── foo
+├── c
+│	└── foo
+├── d
+├── e
+```
+We want to find which directory contains a file called `foo` and then run a command on that file. To do so, we can use something like the following command
+```
+find -name "foo" -type f -execdir somecommand \;
+```
+Which will execute `somecommand` within the context of the directories containing the `foo` file. This is akin to manually `cd`'ing into the directory containing the file and running the command. Insanely useful!
+
 * 12-15-2020: TIL that if crafting a CSRF Proof Of Concept attack, the use of other methods besides POST and GET require the attack to invoke an Ajax API (typically XHR) due to the fact that <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fs-method">HTTP Forms are limited to only the POST and GET Methods</a>   
 
 * 12-02-2020: Over a month since I've last posted, yikes. Today's post is much less of a TIL and more of a "Today I Found" post. Today I Found (rediscovered rather) the great folks over at Pentesterlab (https://pentesterlab.com/) a website chock full of free and paid resources for learning more about pentesting. I really enjoyed some of their free challenges, especially some of their entry level scenarios which do a great job highlighting some common vulnerabilities and steps to exploitation, they even have the lab ISOs right there free of charge. In fact, I enjoyed their `SQLi to Shell` entry challenge enough that it prompted me to write a short walkthrough, you can find that <a href="articles/Pentester_Lab_SQLi_to_Shell.md">here</a>
