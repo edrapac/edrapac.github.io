@@ -4,6 +4,8 @@ I thought the best use of this cool github pages feature would be a TIL/Technica
 
 ## TIL (Today I Learned)
 
+* 3-18-2021: Not much of a TIL but today I published several solutions to various KringleCon2020 challenges, very overdue since I had these commits sitting since Dec of 2020 but better late than never! Partial writeup can be found [here!](https://github.com/edrapac/KringleCon2020)
+
 * 3-02-2021: TIL of 2 very useful linux CLI tricks involving `awk` and `find` respectively. The first trick is that `awk` can be used to fuzzy match on columns of text. Let's say that we have a 3 column file, `myfile.txt` like the one below:
 ```
 testing		foobar		thisisatest
