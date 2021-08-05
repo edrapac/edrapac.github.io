@@ -4,6 +4,8 @@ I thought the best use of this cool github pages feature would be a TIL/Technica
 
 ## TIL (Today I Learned)
 
+* 8-5-2021: Short and sweet, TIL that you cannot extend a disk for a VM in VMware ESXI if that disk has existing snapshots. You must first delete the snapshots or consolidate them.
+
 * 7-23-2021: TIL I leaned about the advantages of running a docker container with it's network type defined as `host`. `host` configures the container to use the host's network stack which translates to a variety of conveniences: the hostname of the container is the same of the physical host, `localhost` maps to 127.0.0.1 on the physical host, etc. The official description from [the Docker docs can be found here](https://docs.docker.com/engine/reference/run/#network-host)
 
 * 3-18-2021: Not much of a TIL but today I published several solutions to various KringleCon2020 challenges, very overdue since I had these commits sitting since Dec of 2020 but better late than never! Partial writeup can be found [here!](https://github.com/edrapac/KringleCon2020)
