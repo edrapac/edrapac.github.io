@@ -4,6 +4,26 @@ I thought the best use of this cool github pages feature would be a TIL/Technica
 
 ## TIL (Today I Learned)
 
+* 8-26-2021: TIL about `pbr`, no not the cheap crappy beer but rather, Python Build Reasonableness! Its a small util that allows you to get info about python packages installed on your system/virtual-environment. For example, running something like `pbr freeze` will show all installed packages as well as their current versions. Useful for, as the name implies, version or code freezes in which a package version is required for pinning. Neato
+
+```
+❯ pbr freeze   
+adblockparser==0.7  # git sha c22e6fb
+aiodns==3.0.0
+aiofiles==0.7.0
+aiohttp==3.7.4.post0
+aiomultiprocess==0.9.0
+aiosqlite==0.17.0
+appdirs==1.4.4
+asgiref==3.4.1
+async-timeout==3.0.1
+attrs==20.3.0
+backoff==1.10.0
+beautifulsoup4==4.9.3
+boto3==1.17.67
+...
+```
+
 * 8-5-2021: Short and sweet, TIL that you cannot extend a disk for a VM in VMware ESXI if that disk has existing snapshots. You must first delete the snapshots or consolidate them.
 
 * 7-23-2021: TIL I leaned about the advantages of running a docker container with it's network type defined as `host`. `host` configures the container to use the host's network stack which translates to a variety of conveniences: the hostname of the container is the same of the physical host, `localhost` maps to 127.0.0.1 on the physical host, etc. The official description from [the Docker docs can be found here](https://docs.docker.com/engine/reference/run/#network-host)
