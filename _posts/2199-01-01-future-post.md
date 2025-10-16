@@ -1,11 +1,16 @@
 ---
-title: 'Future Blog Post'
-date: 2199-01-01
-permalink: /posts/2012/08/blog-post-4/
+title: 'HTB Writeup: Editor'
+date: 2025-10-14
+permalink: /posts/2025-10-14-future-post/
 tags:
-  - cool posts
-  - category1
-  - category2
+  - HTB
+  - HacktTheBox
+  - Editor
+  - Writeup
 ---
 
-This post will show up by default. To disable scheduling of future posts, edit `config.yml` and set `future: false`. 
+My write up for the easy "Editor" machine on HackTheBox
+
+User Flag
+---
+---
