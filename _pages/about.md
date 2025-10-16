@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: Penetration Tester | Security Consultant
+title: Penetration Tester & Security Consultant
 author_profile: true
 redirect_from: 
   - /about/
@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 
-======
+
 Currently providing security consulting services for a variety of clients, deepening my knowledge of offensive security tactics, and occasionally updating this site!
 
 About Me
