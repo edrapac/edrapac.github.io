@@ -86,3 +86,25 @@ The only user on the box is `oliver` and while that user wasnt referenced in any
 Awesome! We are in as oliver. Now we can grab the user flag.
 
 Lets move on to Root.
+
+Root
+- - -
+If you know me, you know I'm lazy. I did just 2 quick checks before running linpeas on the box for a privesc check
+```
+sudo -l
+printenv
+```
+Neither of these returned anything useful (denied sudo access, no interesting env vars). so on to linpeas!
+![scan](/images/editor5.jpg)
+
+Unfortunately, linpeas didn't find anything super useful either. However, I noticed that LinPeas had several references to a non standard service, `netdata`. And after also checking if there were any suid binaries on the box with `find / -perm -4000 2>/dev/null`, I found that netdata had a helper suid binary, ndsudo.
+
+![scan](/images/editor6.jpg)
+![scan](/images/editor7.jpg)
+
+I'll be honest, I had to google a hint here. This is a good reminder that non standard services should always be investigated for potential privesc vectors.
+
+Googling `netdata ndsudo privesc` led me to [this writeup](https://www.rapid7.com/db/modules/exploit/linux/local/ndsudo_cve_2024_32019/) which explained how to use ndsudo to spawn a root shell.
+From here it was pretty trivial, another POC on github (with a really good user interface) found [here](https://github.com/dollarboysushil/CVE-2024-32019-Netdata-ndsudo-PATH-Vulnerability-Privilege-Escalation) and we have root!
+
+![scan](/images/editor8.jpg)
