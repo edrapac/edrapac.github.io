@@ -1,16 +1,13 @@
-- - -
-
+---
 title: 'HTB Writeup: Editor'
 date: 2025-10-14
 permalink: /posts/2025-10-14-HTB-Editor/
 tags:
-
-* HTB
-* HacktTheBox
-* Editor
-* Writeup
-
-- - -
+  - HTB
+  - HackTheBox
+  - Editor
+  - Writeup
+---
 
 My write up for the easy "Editor" machine on HackTheBox
 
@@ -75,7 +72,7 @@ After some poking, I realized that this shell is really limited. I can't do much
 
 The box reports it has python3 installed, so I'll use this fantastic guide from ropnop [here](https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/#method-1-python-pty-module) to upgrade my shell.
 
-Admidetly, this is usually the part I get stuck at - we have a low level shell but not user yet. Where do we go? Generally, the answer can be found in the service we exploit. Given that xwiki supports user accounts, I figured there must be a user account on the box we can use that maps to an xwiki user.
+Addmitedly, this is usually the part I get stuck at - we have a low level shell but not user yet. Where do we go? Generally, the answer can be found in the service we exploit. Given that xwiki supports user accounts, I figured there must be a user account on the box we can use that maps to an xwiki user.
 
 After poking and googling for a while, I found that xwiki database creds can be found in `xwiki/webapps/xwiki/WEB-INF/hibernate.cfg.xml`.
 ![scan](/images/editor3.jpg)
