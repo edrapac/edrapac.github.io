@@ -22,7 +22,7 @@ First lets get set up. Here is what I like to do at a bare minimum:
 * add the target IP to my /etc/hosts file
 * start the scan in HackerHelper
 
-![scan](/images/editor1.jpg)
+![scan](/images/htb-editor/editor1.jpg)
 
 Once the scan completes, I see multiple references to Xwiki that immediately stand out as an interesting service to persue.
 ```
@@ -64,7 +64,7 @@ The setup here is pretty straightforward. I cloned the repo and ran the exploit 
 
 Note: I would recommend you spend some more time doing recon usually, but this is an easy box so I went straight to the exploit.
 
-![scan](/images/editor2.jpg)
+![scan](/images/htb-editor/editor2.jpg)
 
 Boom! Wow that might have been the fastest shell I've ever gotten.
 
@@ -75,13 +75,13 @@ The box reports it has python3 installed, so I'll use this fantastic guide from 
 Addmitedly, this is usually the part I get stuck at - we have a low level shell but not user yet. Where do we go? Generally, the answer can be found in the service we exploit. Given that xwiki supports user accounts, I figured there must be a user account on the box we can use that maps to an xwiki user.
 
 After poking and googling for a while, I found that xwiki database creds can be found in `xwiki/webapps/xwiki/WEB-INF/hibernate.cfg.xml`.
-![scan](/images/editor3.jpg)
+![scan](/images/htb-editor/htb-editor/editor3.jpg)
 
 Ok cool, so we have a password. But where do we use it? I'll be honest, I spent a while banging my head on this one. But I eventually remembered to check the /home directory since that the actual user we are trying to compromise here. 
 
 The only user on the box is `oliver` and while that user wasnt referenced in any of the xwiki files, I figured it was worth a shot to try the password we found on the user since port 22 is open and modern HTB boxes usually support SSH access once you've compromised a user's password (thank god).
 
-![scan](/images/editor4.jpg)
+![scan](/images/htb-editor/editor4.jpg)
 
 Awesome! We are in as oliver. Now we can grab the user flag.
 
@@ -95,16 +95,16 @@ sudo -l
 printenv
 ```
 Neither of these returned anything useful (denied sudo access, no interesting env vars). so on to linpeas!
-![scan](/images/editor5.jpg)
+![scan](/images/htb-editor/editor5.jpg)
 
 Unfortunately, linpeas didn't find anything super useful either. However, I noticed that LinPeas had several references to a non standard service, `netdata`. And after also checking if there were any suid binaries on the box with `find / -perm -4000 2>/dev/null`, I found that netdata had a helper suid binary, ndsudo.
 
-![scan](/images/editor6.jpg)
-![scan](/images/editor7.jpg)
+![scan](/images/htb-editor/editor6.jpg)
+![scan](/images/htb-editor/editor7.jpg)
 
 I'll be honest, I had to google a hint here. This is a good reminder that non standard services should always be investigated for potential privesc vectors.
 
 Googling `netdata ndsudo privesc` led me to [this writeup](https://www.rapid7.com/db/modules/exploit/linux/local/ndsudo_cve_2024_32019/) which explained how to use ndsudo to spawn a root shell.
 From here it was pretty trivial, another POC on github (with a really good user interface) found [here](https://github.com/dollarboysushil/CVE-2024-32019-Netdata-ndsudo-PATH-Vulnerability-Privilege-Escalation) and we have root!
 
-![scan](/images/editor8.jpg)
+![scan](/images/htb-editor/editor8.jpg)
