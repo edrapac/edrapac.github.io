@@ -11,7 +11,8 @@ redirect_from:
 
 WORK EXPERIENCE
 ======
-Halock Security                                                                              2025 – Current
+Halock Security                                                                              2025 – Current 
+
 Senior Security Consultant
 *	Performed web application, API, and external network penetration tests, identifying and exploiting vulnerabilities across a diverse range of client environments. 
 *	Executed internal network and Active Directory penetration tests, simulating adversarial attack paths including domain enumeration, privilege escalation, lateral movement, and domain compromise. 
