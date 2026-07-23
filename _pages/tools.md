@@ -19,11 +19,3 @@ alongside rule counts and rough runtime cost.
 Search by name, behavior, or use case; filter by speed band; sort by rule
 count. Source data lives in
 [edrapac/Hashcracking](https://github.com/edrapac/Hashcracking).
-
-<p><a href="/tools/hashcat-rules/" class="btn btn--primary">Open the reference &rarr;</a></p>
-
-<p style="font-size:.85em;opacity:.7">
-Runtime figures assume a ~55M-word list against a fast unsalted hash at
-~10&nbsp;GH/s. Slow hashes (bcrypt, WPA) scale to days or years — divide your
-real hashrate into the candidate count.
-</p>
