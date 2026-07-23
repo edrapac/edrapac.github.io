@@ -1,13 +1,12 @@
 ---
 title: "Tools"
 permalink: /tools/
-excerpt: "Small self-contained things I've built."
+excerpt: "Small things I've built."
 layout: single
 author_profile: true
 ---
 
-Small self-contained things I've built. Each one opens as its own full-width
-page — they need more horizontal room than this column gives.
+Small things I've built.
 
 ## [Hashcat Rules Reference](/tools/hashcat-rules/)
 
