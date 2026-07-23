@@ -8,7 +8,7 @@ author_profile: true
 
 Projects - some of my fun, more polished work
 
-## "Who Has Open Firebases?"(https://whohasopenfirebases.com/)
+## ["Who Has Open Firebases?"](https://whohasopenfirebases.com/)
 A project dedicated to indexing open Google Firebase instances and displaying basic metrics to track amount found over time.
 
 
